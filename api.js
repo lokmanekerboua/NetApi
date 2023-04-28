@@ -4,12 +4,13 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const { Client } = require('pg');
 const app = express();
+const PORT = process.env.PORT || 3030;
 
 app.use(bodyParser.json());
 app.use(cors());
 
-app.listen(3300, ()=>{
-    console.log("server listening on 3300");
+app.listen(PORT, ()=>{
+    console.log(`server listening on ${PORT}`);
 })
 
 client.connect();
